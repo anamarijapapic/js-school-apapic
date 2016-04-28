@@ -3,7 +3,8 @@
 
 ### Min of 2 numbers
 
-Write a function minNumber that takes two numbers and returns their minimum.
+Write a function minNumber that takes two numbers and returns their minimum.  
+Ne koristiti native JS funkcije `Math.min()` i `Math.max()`.
 
 ```js
 console.log(minNumber(0, 10));	// 0
@@ -16,6 +17,7 @@ Napisi funkciju koja prima 3 broja i vraca najveci.
 Ako se funkcija pozove bez argumenata neka vrati `-Infinity`.  
 Ako se funckija pozove sa argumentom koji se nemoze pretvorit u broj neka vrati `NaN`.  
 Parametre pokusati pretvoriti u broj pomocu `Number()` funkcije, npr. `var a = Number(a)`.  
+Ne koristiti native JS funkcije `Math.min()` i `Math.max()`.  
 Omoguciti da se funkcija moze pozvati i sa manje od 3 argumenta.  
 Primjer outputa funkcije:
 
