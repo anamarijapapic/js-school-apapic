@@ -56,7 +56,7 @@ console.log(countChar("kakkerlak", "k"));	// 4
 
 ### Countdown
 
-Using recursion write a JavaScript function that counts down from a number to 1 to console. Write a similar function that counts up from 1 to number.
+Write a JavaScript function that counts down from a number to 1 to console. Write a similar function that counts up from 1 to number. Use recursion to implement both functions.
 
 ```js
 countDown(10);
