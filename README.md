@@ -34,6 +34,13 @@ console.log(maxNumber(5, "14"));				// 14
 Write a JavaScript function that accepts a number as a parameter and checks if the number is prime or not.  
 A prime number (or a prime) is a natural number greater than 1 that has no positive divisors other than 1 and itself.
 
+```js
+console.log(isPrimeNumber(-2));	// false
+console.log(isPrimeNumber(1));	// false
+console.log(isPrimeNumber(7));	// true
+console.log(isPrimeNumber(13));	// true
+```
+
 ### Bean counting
 
 You can get the Nth character, or letter, from a string by writing "string".charAt(N), similar to how you get its length with "s".length. The returned value will be a string containing only one character (for example, "b"). The first character has position zero, which causes the last one to be found at position string.length - 1. In other words, a two-character string has length 2, and its characters have positions 0 and 1.
