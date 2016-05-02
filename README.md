@@ -269,6 +269,12 @@ var bar = function() {
 
 * Pogledat video za string-ove: https://www.youtube.com/watch?v=O7KwWw3KLw4
 * Pogledat video za array-ove: https://www.youtube.com/watch?v=H4Sf4suR3C4
+* Procitat *Eloquent JavaScript > Data Structures: Objects and Arrays*  
+Preskocit ova poglavlja (ne trosit vrijeme na kompliciranu matematiku):
+  * The lycanthrope’s log
+  * Computing correlation
+  * Objects as maps
+  * The final analysis
 
 ### Basic string methods & properties
 
