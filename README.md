@@ -265,4 +265,81 @@ var bar = function() {
 </script>
 ```
 
+# 04 Strings, Arrays and Objects
+
+* Pogledat video za string-ove: https://www.youtube.com/watch?v=O7KwWw3KLw4
+* Pogledat video za array-ove: https://www.youtube.com/watch?v=H4Sf4suR3C4
+
+### Basic string methods & properties
+
+```js
+var str = '  Lorem ipsum, lorem ipsum.  ';
+
+console.log(str.length); // sto vraca length property?
+
+console.log(str.toUpperCase());
+console.log(str.toLowerCase());
+console.log(str.indexOf('ipsum'));
+console.log(str.split(' '));
+console.log(str.slice(-8, -3));
+console.log(str.trim());
+console.log(str.charAt(2));
+
+// sto vraca svaka od ovih metoda? koje od ovih metoda nerade u IE8? zasto nerade?
+```
+
+### String type check
+
+Write a JavaScript function to check if an input is a string.
+
+```js
+console.log(isString());		// false
+console.log(isString(2));		// false
+console.log(isString(''));		// true
+console.log(isString('abc'));	// true
+```
+
+### Blank string check
+
+Write a JavaScript function to check whether a string is blank or not. If the user specifies an argument other than string return false.
+
+```js
+console.log(isBlank(2));		// false
+console.log(isBlank(''));		// true
+console.log(isBlank('abc'));	// false
+```
+
+### Split string into words
+
+Write a JavaScript function to split a string and convert it into an array of words.
+
+```js
+console.log(splitString('Lorem ipsum dolor'));	// ["Lorem", "ipsum", "dolor"]
+```
+
+### Extract part of string
+
+Write a JavaScript function to remove specified number of characters from a string.
+
+```js
+console.log(extractString('Lorem ipsum dolor sit.', 5));	// Lorem
+```
+
+### Extract name initials
+
+Write a JavaScript function to convert a name into initials.
+
+```js
+console.log(getInitials('John Doe'));		// J. D.
+console.log(getInitials('Donald Trump'));	// D. T.
+```
+
+### Capitalize first letter
+
+Write a JavaScript function to capitalize the first letter of a string.
+
+```js
+console.log(capitalizeString('lorem ipsum.'));	// Lorem ipsum.
+```
+
 
