@@ -1,4 +1,28 @@
 
+# 02 Program Structure: Loops and Conditional Execution
+
+### Multiples
+
+Napisati program koji provjerava jesu li 2, 3, 5 i 7 višekratnici broja unesenog preko "prompt" funkcije.  
+Output should look like this: http://take.ms/rSBNh
+
+### Even/odd number
+
+Napisat program koji provjerava je li uneseni broj paran ili neparan. Omoguciti korisniku ponavljajuci unos brojeva preko petlje i "prompt" funkcije.  
+Omoguciti prekid izvrsavanja programa kada je unesenea vrijednost jednaka 0 ili nije valjani broj.  
+Output should look like this: http://take.ms/qRIG4
+
+### Celsius to fahrenheit conversion table
+
+Napisati program koji ispisuje pretvaracku tablicu Celsiusa u Fahrenhite. Temperature u tablici trebaju biti u rasponu od -50 do +50 Celsiusa s porastom od 5 stupnjeva.  
+Fromula za pretvorbu Celsiusa u Fahrenhite je "f = (9/5) * c + 32".  
+Output should look like this: http://take.ms/EMtpj
+
+### Leap year
+
+Napisat program koji provjerava je li godina unesenea preko "prompt" prozora prijestupna. Prijestupna godina je svaka onda koja je djeljiva s 4 osim ako nije dijeljiva i sa 100.  
+Međutim, prijestupna je i svaka ona koja je djeljiva s 400.
+
 # 03 Functions
 
 ### Min of 2 numbers
