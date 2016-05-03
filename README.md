@@ -269,12 +269,132 @@ var bar = function() {
 
 * Pogledat video za string-ove: https://www.youtube.com/watch?v=O7KwWw3KLw4
 * Pogledat video za array-ove: https://www.youtube.com/watch?v=H4Sf4suR3C4
+* Pogledat objects, properties and methods: https://www.youtube.com/watch?v=8jkyqWSimDc
+* Pogledat primitive types vs reference types: https://www.youtube.com/watch?v=mh-hPzDfb_Q
 * Procitat *Eloquent JavaScript > Data Structures: Objects and Arrays*  
 Preskocit ova poglavlja (ne trosit vrijeme na kompliciranu matematiku):
   * The lycanthrope’s log
   * Computing correlation
   * Objects as maps
   * The final analysis
+
+```js
+var obj1 = {name: 'John'};
+var obj2 = obj1;
+
+// `obj1` i `obj2` su varijable preko kojih mozemo doci do objekta `{name: 'John'}` koji je u memoriji.
+// u memoriji postoji samo jedan objekt `{name: 'John'}`, preko varijabli `obj1` i `obj2` mozemo mijenjati taj objekt.
+// kazemo da varijable `obj1` i `obj2` pokazuju na taj objekt. ovakve varijable nazivamo "referenca".
+```
+
+### Primitive vs reference data types #1
+
+Nabroji koji su primitive data types a koji reference data types u Javascript-u.
+
+### Primitive vs reference data types #2
+
+```js
+var obj1 = {name: 'John'};
+var obj2 = obj1;
+
+// koliko referenci imamo u programu?
+// koliko objekata imamo u memoriji?
+
+obj1.name = 'Mike';	// ako promijenimo obj1.name da li se promijenila vrijednost obj2.name? zasto?
+obj2.name = 'Alex';	// ako promijenimo obj2.name da li se promijenila vrijednost obj1.name? zasto?
+
+// koja je trenutacna vrijednost name property-a objekta {name: 'John'}?
+```
+
+### Primitive vs reference data types #3
+
+```js
+var obj1 = {name: 'John'};
+var obj2 = obj1;
+var obj3 = {name: 'John'};
+
+// koliko referenci imamo u programu?
+// koliko objekata imamo u memoriji?
+
+if (obj1 === obj2) {
+	// hoce li program uci u ovaj if block? zasto?
+}
+
+if (obj1 === obj3) {
+	// hoce li program uci u ovaj if block? zasto?
+}
+```
+
+### Primitive vs reference data types #4
+
+```js
+var obj1 = {name: 'John'};
+var obj2 = obj1;
+
+obj1 = 5;
+
+// koja je vrijednost obj2 sada? zasto?
+```
+
+### Primitive vs reference data types #5
+
+```js
+var obj1 = {name: 'John'};
+var obj2 = obj1;
+
+obj1 = {name: 'Mike'};
+
+// koliko objekata postoji u memoriji sada?
+// koja je vrijednost varijable obj2 sada? zasto?
+
+obj1 = obj2;
+
+// na sto referenca obj1 pokazuje sada?
+// mozemo li ikako pristupiti objektu "{name: 'Mike'};" kojeg smo stvorili u liniji 4?
+// koliko objekata postoji u memoriji sada?
+```
+
+### Primitive vs reference data types #6
+
+```js
+function updateObject(param) {
+	param.name = 'Mike';
+}
+
+function updateArray(param) {
+	param.push(4);
+}
+
+var obj = {name: 'John'};
+var arr = [1, 2, 3];
+
+updateObject(obj);
+updateArray(arr);
+
+// koju vrijednost obj ima sada? zasto?
+// koju vrijednost arr ima sada? zasto?
+```
+
+### Primitive vs reference data types #7
+
+```js
+function updateObject(param) {
+	param = {name: 'John'};
+}
+
+function updateArray(param) {
+	param = [1, 2, 3, 4];
+}
+
+var obj = {name: 'John'};
+var arr = [1, 2, 3];
+
+updateObject(obj);
+updateArray(arr);
+
+// koju vrijednost obj ima sada? zasto?
+// koju vrijednost arr ima sada? zasto?
+```
 
 ### Basic string methods & properties
 
