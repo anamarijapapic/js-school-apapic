@@ -1,10 +1,71 @@
 
 # 02 Program Structure: Loops and Conditional Execution
 
+### Introduction
+
+* Procitat *Eloquent JavaScript > Program Structure*
+* Pogledat video za Truthy i Falsy values: https://www.youtube.com/watch?v=FzNQ2USorGY
+* Pogledat video za Conditional Execution: https://www.youtube.com/watch?v=TPDz_84UJGw
+* Pogledat while loop, break, continue: https://www.youtube.com/watch?v=B6ArKUjrYlo
+* Pogledat do...while loop: https://www.youtube.com/watch?v=RDLhSJVMJMY
+* Pogledat for loop: https://www.youtube.com/watch?v=zpk6_dXiSog
+
+### Truthy/Falsy values #1
+
+Nabroji barem 6 Falsy vrijednosti. Nabroji barem 6 Truthy vrijednosti.
+
+### Truthy/Falsy values #2
+
+```js
+if ('') {
+	console.log('Block #1');
+}
+if (' ') {
+	console.log('Block #2');
+}
+if ('  ') {
+	console.log('Block #3');
+}
+if (0) {
+	console.log('Block #4');
+}
+if ('0') {
+	console.log('Block #5');
+}
+if (1) {
+	console.log('Block #6');
+}
+if ('1') {
+	console.log('Block #7');
+}
+
+// koji ce se blokovi ispisati na konzolu a koji nece? zasto?
+```
+
 ### Multiples
 
 Napisati program koji provjerava jesu li 2, 3, 5 i 7 višekratnici broja unesenog preko "prompt" funkcije.  
 Output should look like this: http://take.ms/rSBNh
+
+### Looping a triangle
+
+Write a loop that makes seven calls to console.log to output the following triangle:
+
+```js
+#
+##
+###
+####
+#####
+######
+#######
+```
+
+### FizzBuzz
+
+Write a program that uses console.log to print all the numbers from 1 to 100, with two exceptions. For numbers divisible by 3, print "Fizz" instead of the number, and for numbers divisible by 5 (and not 3), print "Buzz" instead.
+
+When you have that working, modify your program to print "FizzBuzz", for numbers that are divisible by both 3 and 5 (and still print "Fizz" or "Buzz" for numbers divisible by only one of those).
 
 ### Even/odd number
 
@@ -17,6 +78,25 @@ Output should look like this: http://take.ms/qRIG4
 Napisati program koji ispisuje pretvaracku tablicu Celsiusa u Fahrenhite. Temperature u tablici trebaju biti u rasponu od -50 do +50 Celsiusa s porastom od 5 stupnjeva.  
 Fromula za pretvorbu Celsiusa u Fahrenhite je "f = (9/5) * c + 32".  
 Output should look like this: http://take.ms/EMtpj
+
+### Chess board
+
+Write a program that creates a string that represents an 8×8 grid, using newline characters to separate lines. At each position of the grid there is either a space or a “#” character. The characters should form a chess board.
+
+Passing this string to console.log should show something like this:
+
+```js
+ # # # #
+# # # #
+ # # # #
+# # # #
+ # # # #
+# # # #
+ # # # #
+# # # #
+```
+
+When you have a program that generates this pattern, define a variable size = 8 and change the program so that it works for any size, outputting a grid of the given width and height.
 
 ### Leap year
 
