@@ -490,7 +490,7 @@ function updateArray(param) {
 	param = [1, 2, 3, 4];
 }
 
-var obj = {name: 'John'};
+var obj = {name: 'Chris'};
 var arr = [1, 2, 3];
 
 updateObject(obj);
