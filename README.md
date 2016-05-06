@@ -391,6 +391,8 @@ var obj2 = obj1;
 // kazemo da varijable `obj1` i `obj2` pokazuju na taj objekt. ovakve varijable nazivamo "referenca".
 ```
 
+## Primitive vs reference data types
+
 ### Primitive vs reference data types #1
 
 Nabroji koji su primitive data types a koji reference data types u Javascript-u.
@@ -500,6 +502,8 @@ updateArray(arr);
 // koju vrijednost arr ima sada? zasto?
 ```
 
+## Strings
+
 ### Basic string methods & properties
 
 ```js
@@ -539,29 +543,12 @@ console.log(isBlank(''));		// true
 console.log(isBlank('abc'));	// false
 ```
 
-### Split string into words
-
-Write a JavaScript function to split a string and convert it into an array of words.
-
-```js
-console.log(splitString('Lorem ipsum dolor'));	// ["Lorem", "ipsum", "dolor"]
-```
-
 ### Extract part of string
 
 Write a JavaScript function to remove specified number of characters from a string.
 
 ```js
 console.log(extractString('Lorem ipsum dolor sit.', 5));	// Lorem
-```
-
-### Extract name initials
-
-Write a JavaScript function to convert a name into initials.
-
-```js
-console.log(getInitials('John Doe'));		// J. D.
-console.log(getInitials('Donald Trump'));	// D. T.
 ```
 
 ### Capitalize first letter
@@ -572,4 +559,95 @@ Write a JavaScript function to capitalize the first letter of a string.
 console.log(capitalizeString('lorem ipsum.'));	// Lorem ipsum.
 ```
 
+### Check if letter upper case
 
+Write a function to test if the character at the provided index is upper case.
+
+```js
+console.log(isUpperCase('Hello World.', 0));	// true
+console.log(isUpperCase('Hello World.', 1));	// false
+console.log(isUpperCase('Hello World.', 6));	// true
+```
+
+### Concatenate string n times
+
+Write a function to concatenate a given string n times (make the default n = 1).
+
+```js
+console.log(concatenateString('lorem'));	// lorem
+console.log(concatenateString('lorem', 0));	// 
+console.log(concatenateString('lorem', 3));	// loremloremlorem
+```
+
+### Humanize number
+
+Write a function to convert a Cardinal into an Ordinal number by adding a suffix.  
+Suffix is added based on the last digit of a number: 1st, 2nd, 3rd.  
+Other numbers are suffixed with th: 4th, 9th, 10th.  
+Exception are numbers 11-13: 11th, 12th, 13th.
+
+```js
+console.log(humanizeNumber(1));		// 1st
+console.log(humanizeNumber(2));		// 2nd
+console.log(humanizeNumber(3));		// 3rd
+console.log(humanizeNumber(4));		// 4th
+console.log(humanizeNumber(9));		// 9th
+console.log(humanizeNumber(10));	// 10th
+console.log(humanizeNumber(11));	// 11th
+console.log(humanizeNumber(12));	// 12th
+console.log(humanizeNumber(13));	// 13th
+console.log(humanizeNumber(21));	// 21st
+console.log(humanizeNumber(302));	// 302nd
+console.log(humanizeNumber(1103));	// 1103rd
+```
+
+### Pad string
+
+Write a function to pad a string to specified length.
+
+```js
+console.log(padString('2', '-', 5));			// ----2
+console.log(padString('cat', '-', 5));			// --cat
+console.log(padString('house', '-', 5));		// house
+console.log(padString('lorem ipsum', '-', 5));	// lorem ipsum
+
+console.log(padString('2', '0', 7));			// 0000002
+console.log(padString('15', '0', 7));			// 0000015
+console.log(padString('3014', '0', 7));			// 0030145
+```
+
+## Arrays
+
+### Split string into words
+
+Write a JavaScript function to split a string and convert it into an array of words.
+
+```js
+console.log(splitString('Lorem ipsum dolor'));	// ["Lorem", "ipsum", "dolor"]
+```
+
+### Truncate words
+
+Write a function to truncate a string to a certain number of words.
+
+```js
+console.log(truncateWords('Lorem ipsum dolor sit amet.', 3));	// Lorem ipsum dolor
+```
+
+### Alphabetize string
+
+Write a function to alphabetize a string, i.e. sort the letters alphabetically. Remove the whitespace.
+
+```js
+console.log(alphabetizeString('Lorem ipsum'));	// Leimmoprsu
+console.log(alphabetizeString('gfedcba'));	// abcdefg
+```
+
+### Extract name initials
+
+Write a JavaScript function to convert a name into initials.
+
+```js
+console.log(getInitials('John Doe'));		// J. D.
+console.log(getInitials('Donald Trump'));	// D. T.
+```
