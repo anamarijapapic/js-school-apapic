@@ -618,6 +618,100 @@ console.log(padString('3014', '0', 7));			// 0030145
 
 ## Arrays
 
+### Basic array methods & properties
+
+```js
+// Array.prototype.length
+
+var arr = [1, 2, 3, 4, 5];
+console.log(arr.length); // sto je length property?
+
+// Array.prototype.push()
+// Array.prototype.unshift()
+// Array.prototype.pop()
+// Array.prototype.shift()
+// Array.prototype.splice()
+// Array.prototype.reverse()
+// Array.prototype.sort()
+// Array.prototype.join()
+// Array.prototype.indexOf()
+// Array.prototype.filter()
+
+// opisi i demonstriraj sto radi svaka od ovih metoda. koje od ovih metoda mijenjaju array in place a koje ne?
+// koje od ovih metoda nerade u IE8? zasto nerade?
+```
+
+### Looping an array
+
+```js
+var arr = [1, 2, 3, 4, 5];
+
+// napisi petlju koja ce proci kroz sve elemente (od prvog do zadnjeg) array-a i ispisati ih u konzoli.
+// napisi drugu petlju koja radi isto samo obrnutim redosljedom (od zadnjeg do prvog).
+```
+
+### Array elements #1
+
+```js
+var arr = [1, 2, 3];
+
+console.log(arr[0]); // kojem elementu pristupamo? kojem indexu pristupamo?
+
+console.log(arr[10]);
+
+// koju vrijednost dobijemo kada pristupamo indexu kojeg nema u arrayu?
+// da li dobijemo error?
+// hoce li se array prosirit (hoce li se promijeniti length) ako pristupimo indexu kojeg nema?
+```
+
+### Array elements #2
+
+```js
+var arr1 = [1, 2, 3];
+arr1.pop();
+arr1.pop();
+arr1.pop();
+
+var arr2 = [1, 2, 3];
+arr2.length = 0;
+
+// jesu li ova 2 bloka ekvivalentna? da li je stanje oba arraya sada isto?
+```
+
+### Array elements #3
+
+```js
+var arr = [1, 2, 3, 4];
+
+arr.push(5);
+
+// koliko elemenata array ima? koji su?
+
+arr.length = 0;
+arr.push(6);
+
+// koliko elemenata array ima? koji su?
+
+arr[3] = 7;
+
+// koliko elemenata array ima? koji su? sto se nalazi na indexima 1 i 2?
+// koja je vrijednost length property-a?
+
+arr.length = 0;
+arr[arr.length] = 8;
+
+// koliko elemenata array ima? koji su? koja je vrijednost length property-a?
+
+arr[] = 8;
+
+// koliko elemenata array ima? koji su?
+
+arr.push(8);
+
+// u svakoj od zadnje 3 linije smo dodali novi element u array.
+// ima li razlike izmedu ta 3 nacina dodavanja elementa u array?
+```
+
 ### Split string into words
 
 Write a JavaScript function to split a string and convert it into an array of words.
@@ -652,6 +746,31 @@ console.log(getInitials('John Doe'));		// J. D.
 console.log(getInitials('Donald Trump'));	// D. T.
 ```
 
+### Clone array
+
+Write a function to clone (make a shallow copy, not deep copy) an array.
+
+```js
+var arr1 = [1, 2, 3, 4];
+var arr2 = arrayClone(arr1);
+
+arr2.push(5);
+
+console.log(arr1); // [1, 2, 3, 4]
+console.log(arr2); // [1, 2, 3, 4, 5]
+```
+
+### Sort array of numbers
+
+Assume we have an array of numbers. Write a function that does a numeric sort on such array. Don't sort the array in place i.e. function should return a new array.
+
+```js
+var arr1 = [135, 2, 5, 1, 23, 10];
+var arr2 = numericSort(arr1);
+console.log(arr1); // [135, 2, 5, 1, 23, 10]
+console.log(arr2); // [1, 2, 5, 10, 23, 135]
+```
+
 ### Sum of a range
 
 Write a `range1` function that takes two arguments, start and end, and returns an array containing all the numbers from start up to (and including) end.
@@ -676,6 +795,15 @@ console.log(range2(8, 2, 2));	// [8, 6, 4, 2]
 // sum
 console.log(sum([1, 2, 3, 4]));	// 10
 console.log(sum(range1(1, 4)));	// 10
+```
+
+### Find the most frequent item of an array
+
+Write a function to find the most frequent item of an array of primitive types.
+
+```js
+console.log(findMostPopularItem([1, 1, 1, 2, 2]));		// 2
+console.log(findMostPopularItem(['a', 'b', 'b', 'c']));	// b
 ```
 
 ### Reverse an array
