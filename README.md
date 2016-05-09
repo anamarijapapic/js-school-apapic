@@ -613,7 +613,7 @@ console.log(padString('lorem ipsum', '-', 5));	// lorem ipsum
 
 console.log(padString('2', '0', 7));			// 0000002
 console.log(padString('15', '0', 7));			// 0000015
-console.log(padString('3014', '0', 7));			// 0030145
+console.log(padString('3014', '0', 7));			// 0003014
 ```
 
 ## Arrays
@@ -621,23 +621,21 @@ console.log(padString('3014', '0', 7));			// 0030145
 ### Basic array methods & properties
 
 ```js
-// Array.prototype.length
-
 var arr = [1, 2, 3, 4, 5];
 console.log(arr.length); // sto je length property?
 
-// Array.prototype.push()
-// Array.prototype.unshift()
-// Array.prototype.pop()
-// Array.prototype.shift()
-// Array.prototype.splice()
-// Array.prototype.reverse()
-// Array.prototype.sort()
-// Array.prototype.join()
-// Array.prototype.indexOf()
-// Array.prototype.filter()
+// arr.push(...)
+// arr.unshift(...)
+// arr.pop(...)
+// arr.shift(...)
+// arr.splice(...)
+// arr.reverse(...)
+// arr.sort(...)
+// arr.join(...)
+// arr.indexOf(...)
+// arr.filter(...)
 
-// opisi i demonstriraj sto radi svaka od ovih metoda. koje od ovih metoda mijenjaju array in place a koje ne?
+// opisi i demonstriraj sto radi svaka od metoda nabrojanih gore. koje od ovih metoda mijenjaju array in place a koje ne?
 // koje od ovih metoda nerade u IE8? zasto nerade?
 ```
 
