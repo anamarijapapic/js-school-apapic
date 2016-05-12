@@ -700,14 +700,10 @@ arr[arr.length] = 8;
 
 // koliko elemenata array ima? koji su? koja je vrijednost length property-a?
 
-arr[] = 8;
-
-// koliko elemenata array ima? koji su?
-
 arr.push(8);
 
-// u svakoj od zadnje 3 linije smo dodali novi element u array.
-// ima li razlike izmedu ta 3 nacina dodavanja elementa u array?
+// u svakoj od zadnje 2 linije smo dodali novi element u array.
+// ima li razlike izmedu ta 2 nacina dodavanja elementa u array?
 ```
 
 ### Split string into words
