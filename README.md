@@ -811,3 +811,156 @@ var arr = [1, 2, 3, 4, 5];
 reverseArrayInPlace(arr);
 console.log(arr); // [5, 4, 3, 2, 1]
 ```
+
+## Objects
+
+### Introduction
+
+* Kod vjezbanja s objektima koristiti console.dir() metodu za uvid u stanje objekta, npr:
+```js
+var person = {
+	'name': 'John Doe',
+	'shoe size': 42
+};
+
+// u vecini browsera postoji razlika razliku izmedu console.log() i console.dir()
+// tj. console.dir() ispisuje interaktivni pregled objekta u konzoli
+
+// primjetiti da ce console.dir() pokazati i skriveni property "__proto__",
+// to je sistemski property preko kojeg javascript implementira inheritance, zasad se ne obazirati na taj property
+
+console.log(person);
+console.dir(person);
+```
+
+### Object properties #1
+
+```js
+var person = {
+	'name': 'John Doe',
+	'shoe size': 42
+};
+
+// how many properties are there in the person object?
+
+// there are 2 ways to access object properties: dot notation and bracket notation.
+
+// change person's name and print it to console by using both notations.
+
+// change persons's shoe size and print it to console. can we access shoe size by using both notations?
+```
+
+### Object properties #2
+
+```js
+var person = {
+	'name': 'John Doe',
+	'shoe size': 42
+};
+
+// what happens when we try to access a property that's undeclared (e.g. person.address)?
+// do we get a reference error like when trying to access a variable that's undeclared?
+
+// how can we remove properties from objects?
+// remove all properties from the person object.
+// show with console.dir() that the properties are really removed.
+```
+
+### Define a simple object
+
+Make a simple object to represent a car. Make a function to print car data to console.
+A car has these 3 properties:  
+Name: Audi A1 1.6 TDI  
+Price: 24.780 €  
+Top speed: 200 km/h
+
+```js
+printCar(car); // Audi A1 1.6 TDI costs 24.780€ and has a top speed of 200 km/h.
+```
+
+### Array of objects
+
+Make an array of car objects (from the previous exercise).  
+Make a function to sort the array by car name and print all cars to console.  
+Make a function to sort the array by car price and print all cars to console.  
+Make a function that takes a `speed` parameter and prints all cars faster than given speed.
+
+### Date object is a reference data type
+
+* Pogledat video za Javascript Date object: https://www.youtube.com/watch?v=M3VEFVBRw-o
+
+```js
+var date1 = new Date(...);
+var date2 = date1;
+
+// demonstrate that the date object is a reference data type, i.e. show that both references change the same object in memory
+```
+
+### People database
+
+Ministarstvo unutarnjih poslova nam je platio da im napravimo bazu podataka sa podacima građana Republike Hrvatske.  
+Nadopuni dijelove koji nedostaju u programu ispod:
+
+```js
+var persons = [];
+
+function addPersonToDatabase(person) {
+	// add person to the persons array
+	// make sure we don't add the same person twice (based on OIB)
+	// if person with person.oib already exists in the array update the person with new data
+}
+
+function printPerson(person) {
+	// print single person object to console
+}
+
+function printPersonsSortedByDateOfBirth(desc) {
+	// sort persons by date of birth and print to console
+	// sort ascending or descending depending if parameter is true or false - set default to ascending
+
+	// how to compare dates:
+	// http://stackoverflow.com/questions/492994/compare-two-dates-with-javascript/493018#493018
+
+	// ascending sort example:
+	// 22.04.1995
+	// 23.04.1995
+	// 24.04.1995
+}
+
+function printPersonsSortedByName(desc) {
+	// sort persons by their full name and print to console
+	// sort ascending or descending depending if parameter is true or false - set default to ascending
+
+	// ascending sort example:
+	// Bandic Zoran
+	// Josipovic Ivo
+	// Karamarko Tomislav
+}
+
+function printPersonsFilteredByZip(zip) {
+	// print all persons with specific zip to console
+}
+
+// database usage:
+
+var person = {
+	name: 'Ivan',
+	surname: 'Horvat',
+	dateOfBirth: new Date(1995, 4, 23),
+	city: 'Split',
+	zip: '21000',
+	oib: '12345678912'
+};
+
+printPerson(person); // #12345678912 - Horvat, Ivan - (23.04.1995) - Split 21000
+
+addPersonToDatabase(person);
+
+printPersonsSortedByDateOfBirth();
+printPersonsSortedByDateOfBirth(true);
+
+printPersonsSortedByName();
+printPersonsSortedByName(true);
+
+printPersonsFilteredByZip('21000');
+```
