@@ -965,3 +965,14 @@ printPersonsSortedByName(true);
 printPersonsFilteredByZip('21000');
 ```
 
+# jQuery exercises
+
+### Fixed section navigation
+
+Implement rudimentary cutup of the page.  
+Implement fixed section navigation menu to navigate the sections:
+ - When you click on the menu item it should scroll to the section.
+ - When you hover over the menu it should slide out (see PSD) and show the menu items.
+ - When you scroll the page, over the sections, the menu items should change active state to reflect what section you're currently on.
+ - Implement fancy menu transitions on hover and when scrolling the page.
+ - Make sure navigation works when there's a lot of images on the page, or slow loading images.
