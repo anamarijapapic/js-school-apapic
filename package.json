@@ -1,6 +1,22 @@
 {
-	"devDependencies": {
-		"eslint": "^2.8.0",
-		"eslint-config-wordpress": "^0.1.0"
-	}
+  "name": "js-school",
+  "version": "1.0.0",
+  "description": "Slicejack JS school repo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/slicejack/js-school.git"
+  },
+  "author": "Slicejack",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/slicejack/js-school/issues"
+  },
+  "homepage": "https://gitlab.com/slicejack/js-school#README",
+  "devDependencies": {
+    "eslint": "^4.19.1"
+  }
 }
