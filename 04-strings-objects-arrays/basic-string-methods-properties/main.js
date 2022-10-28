@@ -12,4 +12,4 @@ console.log(str.trim());            // -> string s uklonjenim whitespaceovima s 
 console.log(str.charAt(2));         // -> string representing a character na index poziciji 2 ('L')
 
 // sto vraca svaka od ovih metoda? koje od ovih metoda nerade u IE8? zasto nerade?
-// trim() ne radi u IEB -> not supported
+// trim() ne radi u IE8 -> not supported

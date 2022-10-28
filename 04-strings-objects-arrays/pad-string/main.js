@@ -6,8 +6,8 @@ function padString(str, padStr, length) {
     newStr = '';
     padLength = length - str.length;
     for (let i = 0; i < padLength; i++) {
-        for (let j = 0; j < padStr.length; j++) {
-            newStr += padStr.charAt(j);
+        for (ch of padStr) {
+            newStr += ch;
             if (newStr.length === padLength) {
                 i = padLength;
                 break;
