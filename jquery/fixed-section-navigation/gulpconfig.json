@@ -1,0 +1,40 @@
+{
+    "watch": [
+        {
+            "files" : "html/source/less/**/*.less",
+            "build" : { "less" : "default" }
+        },
+        {
+            "files" : "html/source/js/scripts.js",
+            "build" : { "js" : "default" }
+        },
+        {
+            "files" : [
+                "html/source/js/vendor/**/*.js",
+                "html/source/js/vendors.js"
+            ],
+            "build" : { "js" : "vendors" }
+        }
+    ],
+    "build": {
+        "less": {
+            "default": {
+                "html/source/less/style.less": [
+                    "html/public/css/"
+                ]
+            }
+        },
+        "js": {
+            "default": {
+                "html/source/js/scripts.js": [
+                    "html/public/js/"
+                ]
+            },
+            "vendors": {
+                "html/source/js/vendors.js": [
+                    "html/public/js/"
+                ]
+            }
+        }
+    }
+}

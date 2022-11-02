@@ -1,0 +1,74 @@
+.btn {
+	text-transform: uppercase;
+}
+
+.btn-default {
+	transition-property: background-color, border-color, color;
+	transition-duration: .4s;
+	transition-timing-function: ease;
+
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: @color-green;
+		border-color: @color-green;
+		color: #fff;
+	}
+
+	&--white {
+		background-color: transparent;
+		border-color: #fff;
+		color: #fff;
+
+		&:hover,
+		&:focus,
+		&:active {
+			background-color: #fff;
+			border-color: #fff;
+			color: @color-green;
+		}
+	}
+
+}
+.btn-primary {
+	transition-property: background-color, border-color, color;
+	transition-duration: .4s;
+	transition-timing-function: ease;
+
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: @color-red;
+		border-color: @color-red;
+		color: #fff;
+	}
+}
+.btn-link {
+	font-size: 12px;
+	color:#fff;
+	text-transform: none;
+	padding-left:0;
+	text-decoration: none;
+	position:relative;
+
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: #fff;
+		text-decoration: underline;
+	}
+	&:after {
+		position:absolute;
+		content: url('../pictures/arrow.png');
+		top:33%;
+		left: 97%;
+	}
+
+}
+.btn-link2 {
+	font-size:16px;
+	color:@color-green;
+	text-transform: none;
+
+}

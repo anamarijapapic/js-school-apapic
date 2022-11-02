@@ -971,8 +971,116 @@ printPersonsFilteredByZip('21000');
 
 Implement rudimentary cutup of the page.  
 Implement fixed section navigation menu to navigate the sections:
- - When you click on the menu item it should scroll to the section.
- - When you hover over the menu it should slide out (see PSD) and show the menu items.
- - When you scroll the page, over the sections, the menu items should change active state to reflect what section you're currently on.
- - Implement fancy menu transitions on hover and when scrolling the page.
- - Make sure navigation works when there's a lot of images on the page, or slow loading images.
+
+* When you click on the menu item it should scroll to the section.
+* When you hover over the menu it should slide out (see PSD) and show the menu items.
+* When you scroll the page, over the sections, the menu items should change active state to reflect what section you're currently on.
+* Implement fancy menu transitions on hover and when scrolling the page.
+* Make sure navigation works when there's a lot of images on the page, or slow loading images.
+
+### Multistep form
+
+Folder contains 2 PSD files containing 2 multistep forms, implement both forms each into its own html file. Don't implement 2 JS files, keep all JS code in main.js. Encapsulate JS code for each form properly into its own IIFE so it doesn't affect the logic/variables of the other form.
+Use Select2 plugin to style the select elements.
+At the end of the flow, i.e. after user completes the 3rd step, submit the form using GET request to the same page.  
+Required functionality and UX: http://take.ms/7zNk4  
+Required functionality and UX: http://take.ms/2AqAA  
+
+Implement a data structure that holds data for select elements, if the user selects "Home or Condo" the second select should contain options under "Home or Condo":
+```
+Home or Condo
+	Single Home or Condo (Valued up to $300K)
+	Single Home or Condo ($300 to $500K)
+	Single Home or Condo ($500K to $1 Million)
+	Single Home or Condo (Over $1 Million)
+Apartment Building
+	Multi-Family (2-4 units)
+	Multi-Family (5-19 units)
+	Multi-Family (20-99 units)
+	Multi-Family (100+ units)
+HOA
+	Homeowners Association (2-49 units)
+	Homeowners Association (50-99 units)
+	Homeowners Association (100+ units)
+COA
+	Condominium Association (2-49 units)
+	Condominium Association (50-99 units)
+	Condominium Association (100+ units)
+Commercial
+	Retail (Up to 9,999 sqft)
+	Retail (10,000 - 100,000 sqft)
+	Retail (100,000+ sqft)
+	Office (Up to 9,999 sqft)
+	Office (10,000 - 100,000 sqft)
+	Office (100,000+ sqft)
+	Warehouse/Distribution (Up to 100,000 sqft)
+	Warehouse/Distribution (100,000+ sqft)
+	Light Manufacturing (Up to 100,000 sqft)
+	Light Manufacturing (100,000+ sqft)
+	Parking Garage
+	Biotech/Mission-Critical
+Short-Term Stay
+	Vacation (1-2 units)
+	Vacation (3+ units)
+Other Associations
+	Other Associations (Hotel, Resort etc.)
+	Mobile Home Community
+```
+
+### Form with progress bar & validation
+
+Implement form:
+
+* Only allow submission when all required fields pass validation
+* Required fields & validation format:
+  * First Name (not empty)
+  * Last Name (not empty)
+  * Email (must be valid email)
+  * Industry (not empty)
+  * Password (6+ characters)
+  * Phone (must be in format: "(555) 555-5555" or "555-555-5555")
+* When a required field passes validation advance the progress bar  
+Required functionality and UX: http://take.ms/yQeD6
+
+### Interactive troubleshooting page
+
+Implementiraj interaktivnu troubleshooting stranicu:
+
+* Podatke prebaciti iz PDFa u JS data strukturu
+* Stranica se sastoji od serije pitanja
+* Svako pitanje ima YES/NO odgovor
+* Primjer kako treba radit je u screenshotovima u folderu
+* Dizajn uzet sa screenshotova
+* Implementirat sve botune sa screenshotova u folderu  
+Required functionality and UX: http://take.ms/h7XKB
+
+# Adaptive mobile menu
+
+Implementiraj menu iz PSDa iz layera "burger menu".  
+Menu se treba prilagodavati sirini zaslona, na nacin da se na kraju menija uvijek vidi otprilike pola burgera, tako da je korisniku jasno da ima jos burgera do kojih se moze doci ako se swipea desno.  
+Za menu koristiti idangerous swiper plugin.  
+Swipeanje ljevo/desno mora biti fluidno tj. menu nece snapat za nijedan item, nego se zavisno do momentuma swipea pomice ljevo/desno kao scroll.
+
+# Pagination inside slider
+
+Implementiraj slider iz PSDa. Slider ima paginaciju koja je unutar svakog slidea ispod sadrzaja slidea.  
+Za slider koristiti slick slider (http://kenwheeler.github.io/slick/).
+
+# Infinite scroll
+
+Digni WordPress instancu na localhostu. Implementiraj team members custom post type.  
+Implementiraj infinite scroll na team members stranici iz PSDa bez koristenja bilo kakvog infinite scroll plugina.  
+Kad se dode na dno stranice ucitaju se novi team memberi automatski.  
+Implementiraj jos jednu verziju gdje se na dnu stranice nalazi "Load More" botun, novi team memberi se ucitaju kad se klikne "Load More".
+
+# Stackoverflow tags
+
+Implementiraj tagove kao na StackOverflow. Kad se hovera preko taga trebaju se povuc podaci (followers, questions, description) iz WordPress CPTa preko AJAXa. Implementiraj AJAX request cache tako da se za isti tag ne povlace podaci vise od jednom. Neka tagovi imaju isti slide in efekt kao na StackOverflow.  
+Primjer funkcionalnosti i UX: http://take.ms/S2PbY
+
+# Autocomplete menu & CORS endpoint
+
+Prvi dio zadataka je implementirati autocomplete menu na `#list` input polje. Ne koristiti vec postojece librarye za autocomplete vec implementirati svoj autocomplete. Aktivirati autocomplete samo ako je u inputu 2 ili vise znakova. Ne raditi AJAX requestove instantno nakon svakog keypress-a vec pricekati 300ms nakon svakog keypress-a tako da se ne radi previse requestova. Dok je AJAX request u tijeku prikazati nekakvu animaciju (loader) tako da korisnik dobije dojam da se u pozadini nesto dogada. Ako se treba izvest novi AJAX request a prosli AJAX request je jos u tijeku, otkazi prosli AJAX request prije nego startas novi.  
+Primjer funkcionalnosti i UX: http://take.ms/B1O8K  
+
+Drugi dio zadatka je implementirati AJAX endpoint koji ce vracat podatke za autocomplete u JSON formatu. Endpoint se mora moci kontaktirat sa bilo koje domene (omoguci CORS i testiraj na dev2). Lista podataka za autocomplete se mora vuci iz WordPress CPTa. Lista mora biti sortirana po abecedi.
