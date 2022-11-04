@@ -9,6 +9,7 @@
 
 		<link rel="stylesheet" href="../../vendors/bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" href="main.css">
+		<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 	</head>
 	<body>
 		<nav class="navbar navbar-default">
@@ -51,8 +52,8 @@
 									</div>
 								</label>
 								<div class="col-md-6 form-control-wrapper">
-									<select class="form-control" id="propertyType" required>
-										<option value="" disabled selected>Select property type</option>
+									<select class="form-control selectPropertyType01" id="propertyType" required>
+										<option value="" selected>Select property type</option>
 										<option value="Home or Condo">Home or Condo</option>
 										<option value="Apartment Building">Apartment Building</option>
 										<option value="HOA">HOA</option>
@@ -64,7 +65,7 @@
 								</div>
 							</fieldset>
 							<fieldset class="form-group form-step">
-								<label for="propertyValueSize" class="col-md-6 control-label">
+								<label for="propertySize" class="col-md-6 control-label">
 									<div class="col-md-4 form-step-image">
 										<img src="./assets/tag-svgrepo-com.svg">
 									</div>
@@ -74,8 +75,52 @@
 									</div>
 								</label>
 								<div class="col-md-6 form-control-wrapper">
-									<select class="form-control" id="propertyValueSize" required>
-										<option value="" disabled selected>Select property size</option>
+									<select class="form-control selectPropertySize01" id="propertySize" required>
+										<option value="" selected>Select property size</option>
+										<optgroup label="Home or Condo">
+											<option>Single Home or Condo (Valued up to $300K)</option>
+											<option>Single Home or Condo ($300 to $500K)</option>
+											<option>Single Home or Condo ($500K to $1 Million)</option>
+											<option>Single Home or Condo (Over $1 Million)</option>
+										</optgroup>
+										<optgroup label="Apartment Building">
+											<option>Multi-Family (2-4 units)</option>
+											<option>Multi-Family (5-19 units)</option>
+											<option>Multi-Family (20-99 units)</option>
+											<option>Multi-Family (100+ units)</option>
+										</optgroup>
+										<optgroup label="HOA">
+											<option>Homeowners Association (2-49 units)</option>
+											<option>Homeowners Association (50-99 units)</option>
+											<option>Homeowners Association (100+ units)</option>
+										</optgroup>
+										<optgroup label="COA">
+											<option>Condominium Association (2-49 units)</option>
+											<option>Condominium Association (50-99 units)</option>
+											<option>Condominium Association (100+ units)</option>
+										</optgroup>
+										<optgroup label="Commercial">
+											<option>Retail (Up to 9,999 sqft)</option>
+											<option>Retail (10,000 - 100,000 sqft)</option>
+											<option>Retail (100,000+ sqft)</option>
+											<option>Office (Up to 9,999 sqft)</option>
+											<option>Office (10,000 - 100,000 sqft)</option>
+											<option>Office (100,000+ sqft)</option>
+											<option>Warehouse/Distribution (Up to 100,000 sqft)</option>
+											<option>Warehouse/Distribution (100,000+ sqft)</option>
+											<option>Light Manufacturing (Up to 100,000 sqft)</option>
+											<option>Light Manufacturing (100,000+ sqft)</option>
+											<option>Parking Garage</option>
+											<option>Biotech/Mission-Critical</option>
+										</optgroup>
+										<optgroup label="Short-Term Stay">
+											<option>Vacation (1-2 units)</option>
+											<option>Vacation (3+ units)</option>
+										</optgroup>
+										<optgroup label="Other Associations">
+											<option>Other Associations (Hotel, Resort etc.)</option>
+											<option>Mobile Home Community</option>
+										</optgroup>
 									</select>
 								</div>
 							</fieldset>
@@ -107,6 +152,7 @@
 
 		<script src="../../js/jquery-1.11.3.js"></script>
 		<script src="../../vendors/bootstrap/js/bootstrap.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 		<script src="main.js"></script>
 	</body>
 </html>
