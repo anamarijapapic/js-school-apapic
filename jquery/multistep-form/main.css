@@ -16,7 +16,7 @@ body:before {
     filter: blur(5px);
 }
 
-.heading, .subheading {
+.heading, .subheading, .progressBar {
     color: #fafafa;
     text-shadow: 0px 1px 1px #010101;
 }
@@ -26,6 +26,7 @@ body:before {
 }
 
 .form-steps {
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
     margin: 5vh;
     padding: 0 2rem;
     background-color: #fafafa;
@@ -40,12 +41,15 @@ body:before {
     padding: 2rem 0;
 }
 
-.form-step:focus-within .form-step-image {
+.multistep-form-01 .form-step:focus-within .form-step-image {
     display: initial;
+}
+
+.form-step-image {
     width: 10vw;
     height: auto;
-    -webkit-filter: invert(80%); /* Safari/Chrome */
-    filter: invert(80%);
+    -webkit-filter: invert(90%); /* Safari/Chrome */
+    filter: invert(90%);
 }
 
 .control-label {
@@ -54,7 +58,7 @@ body:before {
     height: 100%;
 }
 
-.form-step-image {
+.multistep-form-01 .form-step-image {
     display: none;
 }
 
@@ -91,7 +95,7 @@ footer {
         height: 150%;
     }
 
-    .form-step:focus-within .form-step-image {
+    .multistep-form-01 .form-step:focus-within .form-step-image, .multistep-form-02 .form-step-image {
         display: none;
     }
 
@@ -103,4 +107,71 @@ footer {
         margin-top: -10vh;
         border-left: none;
     }
+}
+
+.multistep-form-02 {
+    position: relative;
+    margin-top: 3vh;
+}
+
+.multistep-form-02 fieldset {
+    position: relative;
+    margin: 4% 10%;
+    width: 85%;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    background: #fafafa;
+}
+
+.multistep-form-02 fieldset:not(:first-of-type) {
+    display: none;
+}
+
+.multistep-form-02 .form-step-text {
+    position: absolute;
+    z-index: 1;
+}
+
+.progressBar {
+    overflow: hidden;
+    margin: 5vh 0;
+    counter-reset: step;
+}
+
+.progressBar li {
+    position: relative;
+    float: left;
+    width: 33.33%;
+    list-style-type: none;
+}
+
+.progressBar li:before {
+    content: "";
+    display: block;
+    margin: 0 auto 1vh auto;
+    width: 3vh;
+    height: 3vh;
+    border-radius: 25px;
+    background: #fafafa;
+    counter-increment: step;
+}
+
+.progressBar li:after {
+    content: "";
+    position: absolute;
+    top: 1.5vh;
+    left: -75%;
+    z-index: -1;
+    width: 150%;
+    height: 1px;
+    background: #fafafa;
+}
+
+.progressBar li:first-child:after {
+    content: none;
+}
+
+.progressBar li.active:before, .progressBar li.active:after {
+    border: 2px solid #cc5500;
+    background: #ff5f15;
+    color: #fafafa;
 }

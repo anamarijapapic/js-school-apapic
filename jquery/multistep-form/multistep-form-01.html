@@ -28,6 +28,7 @@
 				</div>
 			</div>
 		</nav>
+
 		<div class="container-fluid text-center">
 			<header class="row text-center">
 				<h2 class="heading">Looking for Qualified Property Management Companies in Boston, MA?</h2>
@@ -37,9 +38,9 @@
 
 			<div class="row text-center">
 				<div class="col-md-10 col-md-offset-1">
-					<form class="form-horizontal">
+					<form class="form-horizontal multistep-form-01">
 						<div class="form-steps">
-							<div class="form-group form-step">
+							<fieldset class="form-group form-step">
 								<label for="propertyType" class="col-md-6 control-label">
 									<div class="col-md-4 form-step-image">
 										<img src="./assets/building-svgrepo-com.svg">
@@ -61,8 +62,8 @@
 										<option value="Other Associations">Other Associations</option>
 									</select>
 								</div>
-							</div>
-							<div class="form-group form-step">
+							</fieldset>
+							<fieldset class="form-group form-step">
 								<label for="propertyValueSize" class="col-md-6 control-label">
 									<div class="col-md-4 form-step-image">
 										<img src="./assets/tag-svgrepo-com.svg">
@@ -77,8 +78,8 @@
 										<option value="" disabled selected>Select property size</option>
 									</select>
 								</div>
-							</div>
-							<div class="form-group form-step">
+							</fieldset>
+							<fieldset class="form-group form-step">
 								<label for="propertyZip" class="col-md-6 control-label">
 									<div class="col-md-4 form-step-image">
 										<img src="./assets/location-svgrepo-com.svg">
@@ -91,17 +92,19 @@
 								<div class="col-md-6 form-control-wrapper">
 									<input type="text" class="form-control" id="propertyZip" minlength="5" placeholder="Enter ZIP code" required>
 								</div>
-							</div>
+							</fieldset>
 						</div>
-						<button type="submit" class="btn btn-danger btn-lg disabled">Find property managers</button>
+						<button type="submit" class="btn btn-lg btn-danger disabled">Find property managers</button>
 					</form>
 				</div>
 			</div>
+
 			<footer class="row text-center">
 				<p class="subheading">Copyright ©2004-2016 / All Property Management™ / All Rights Reserved</p>
 				<p class="subheading">A company from <a class="footer-brand" href="#"><img src="./assets/buildium-logo-1.svg" alt="buildium" width="100"></a></p>
 			</footer>
 		</div>
+
 		<script src="../../js/jquery-1.11.3.js"></script>
 		<script src="../../vendors/bootstrap/js/bootstrap.min.js"></script>
 		<script src="main.js"></script>

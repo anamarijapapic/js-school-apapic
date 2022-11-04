@@ -11,6 +11,100 @@
 		<link rel="stylesheet" href="main.css">
 	</head>
 	<body>
+		<nav class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+					<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#"><img src="./assets/logo-1.svg" alt="all property management" width="120"></a>
+			  	</div>
+				<div id="navbar" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<span class="navbar-text">Talk to an expert, call <a class="text-reset text-decoration-none text-warning" href="tel:855-378-0956">855-378-0956</a></span>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container-fluid text-center">
+			<header class="row text-center">
+				<h2 class="heading">Looking for Qualified Property Management Companies in Boston, MA?</h2>
+				<h4 class="subheading">We work tirelessly to find the best property managers, so you don't have to.</h4>
+				<h4 class="subheading">Please use the filter below to find a perfect match for your property.</h4>
+			</header>
+
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<form class="multistep-form-02">
+						<ul class="progressBar">
+							<li class="active">1</li>
+							<li>2</li>
+							<li>3</li>
+						</ul>
+						<fieldset class="form-group form-step">
+							<label for="propertyType" class="col-md-6 control-label">
+								<div class="col-md-4 form-step-image">
+									<img src="./assets/building-svgrepo-com.svg">
+								</div>
+								<div class="col-md-8 form-step-text">
+									What type of property do you own?
+								</div>
+							</label>
+							<div class="col-md-6 form-control-wrapper">
+								<select class="form-control" id="propertyType" required>
+									<option value="" disabled selected>Select property type</option>
+									<option value="Home or Condo">Home or Condo</option>
+									<option value="Apartment Building">Apartment Building</option>
+									<option value="HOA">HOA</option>
+									<option value="COA">COA</option>
+									<option value="Commercial">Commercial</option>
+									<option value="Short-Term Stay">Short-Term Stay</option>
+									<option value="Other Associations">Other Associations</option>
+								</select>
+							</div>
+						</fieldset>
+						<fieldset class="form-group form-step">
+							<label for="propertyValueSize" class="col-md-6 control-label">
+								<div class="col-md-4 form-step-image">
+									<img src="./assets/tag-svgrepo-com.svg">
+								</div>
+								<div class="col-md-8 form-step-text">
+									What is the value/size of property?
+								</div>
+							</label>
+							<div class="col-md-6 form-control-wrapper">
+								<select class="form-control" id="propertyValueSize" required>
+									<option value="" disabled selected>Select property size</option>
+								</select>
+							</div>
+						</fieldset>
+						<fieldset class="form-group form-step">
+							<label for="propertyZip" class="col-md-6 control-label">
+								<div class="col-md-4 form-step-image">
+									<img src="./assets/location-svgrepo-com.svg">
+								</div>
+								<div class="col-md-8 form-step-text">
+									What is the zip code for the property?
+								</div>
+							</label>
+							<div class="col-md-6 form-control-wrapper">
+								<input type="text" class="form-control" id="propertyZip" minlength="5" placeholder="Enter ZIP code" required>
+							</div>
+						</fieldset>
+						<button type="submit" class="btn btn-lg btn-danger disabled">Continue <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
+					</form>
+				</div>
+			</div>
+
+			<footer class="row text-center">
+				<p class="subheading">Copyright ©2004-2016 / All Property Management™ / All Rights Reserved</p>
+				<p class="subheading">A company from <a class="footer-brand" href="#"><img src="./assets/buildium-logo-1.svg" alt="buildium" width="100"></a></p>
+			</footer>
+		</div>
+
 		<script src="../../js/jquery-1.11.3.js"></script>
 		<script src="../../vendors/bootstrap/js/bootstrap.min.js"></script>
 		<script src="main.js"></script>
