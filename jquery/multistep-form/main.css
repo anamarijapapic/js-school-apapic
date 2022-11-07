@@ -41,8 +41,10 @@ body:before {
     padding: 2rem 0;
 }
 
-.multistep-form-01 .form-step:focus-within .form-step-image {
-    display: initial;
+.control-label {
+    display: flex;
+    justify-content: left;
+    height: 100%;
 }
 
 .form-step-image {
@@ -52,13 +54,7 @@ body:before {
     filter: invert(90%);
 }
 
-.control-label {
-    display: flex;
-    justify-content: left;
-    height: 100%;
-}
-
-.multistep-form-01 .form-step-image {
+.multistep-form-01 .form-step-next .form-step-image {
     display: none;
 }
 
@@ -78,6 +74,10 @@ body:before {
     color: #ff5f15;
 }
 
+.form-step-next .form-step-number {
+    color: #808080;
+}
+
 .form-control-wrapper {
     display: flex;
     align-items: center;
@@ -95,8 +95,8 @@ footer {
         height: 150%;
     }
 
-    .multistep-form-01 .form-step:focus-within .form-step-image, .multistep-form-02 .form-step-image {
-        display: none;
+    .form-step-image, .form-step-image-next {
+        display: none !important;
     }
 
     .form-step {

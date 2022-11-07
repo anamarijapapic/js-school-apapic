@@ -64,7 +64,7 @@
 									</select>
 								</div>
 							</fieldset>
-							<fieldset class="form-group form-step">
+							<fieldset class="form-group form-step form-step-next">
 								<label for="propertySize" class="col-md-6 control-label">
 									<div class="col-md-4 form-step-image">
 										<img src="./assets/tag-svgrepo-com.svg">
@@ -75,31 +75,35 @@
 									</div>
 								</label>
 								<div class="col-md-6 form-control-wrapper">
-									<select class="form-control selectPropertySize01" name="propertySize" id="propertySize" required>
-										<option value="" selected>Select property size</option>
+									<select class="form-control selectPropertySize01" name="propertySize" id="propertySize" disabled required>
 										<optgroup label="Home or Condo">
+											<option value="" selected>Select property size</option>
 											<option value="1">Single Home or Condo (Valued up to $300K)</option>
 											<option value="2">Single Home or Condo ($300 to $500K)</option>
 											<option value="3">Single Home or Condo ($500K to $1 Million)</option>
 											<option value="4">Single Home or Condo (Over $1 Million)</option>
 										</optgroup>
 										<optgroup label="Apartment Building">
+											<option value="" selected>Select property size</option>
 											<option value="5">Multi-Family (2-4 units)</option>
 											<option value="6">Multi-Family (5-19 units)</option>
 											<option value="7">Multi-Family (20-99 units)</option>
 											<option value="8">Multi-Family (100+ units)</option>
 										</optgroup>
 										<optgroup label="HOA">
+											<option value="" selected>Select property size</option>
 											<option value="9">Homeowners Association (2-49 units)</option>
 											<option value="10">Homeowners Association (50-99 units)</option>
 											<option value="11">Homeowners Association (100+ units)</option>
 										</optgroup>
 										<optgroup label="COA">
+											<option value="" selected>Select property size</option>
 											<option value="12">Condominium Association (2-49 units)</option>
 											<option value="13">Condominium Association (50-99 units)</option>
 											<option value="14">Condominium Association (100+ units)</option>
 										</optgroup>
 										<optgroup label="Commercial">
+											<option value="" selected>Select property size</option>
 											<option value="15">Retail (Up to 9,999 sqft)</option>
 											<option value="16">Retail (10,000 - 100,000 sqft)</option>
 											<option value="17">Retail (100,000+ sqft)</option>
@@ -114,17 +118,19 @@
 											<option value="26">Biotech/Mission-Critical</option>
 										</optgroup>
 										<optgroup label="Short-Term Stay">
+											<option value="" selected>Select property size</option>
 											<option value="27">Vacation (1-2 units)</option>
 											<option value="28">Vacation (3+ units)</option>
 										</optgroup>
 										<optgroup label="Other Associations">
+											<option value="" selected>Select property size</option>
 											<option value="29">Other Associations (Hotel, Resort etc.)</option>
 											<option value="30">Mobile Home Community</option>
 										</optgroup>
 									</select>
 								</div>
 							</fieldset>
-							<fieldset class="form-group form-step">
+							<fieldset class="form-group form-step form-step-next">
 								<label for="propertyZip" class="col-md-6 control-label">
 									<div class="col-md-4 form-step-image">
 										<img src="./assets/location-svgrepo-com.svg">
@@ -135,7 +141,7 @@
 									</div>
 								</label>
 								<div class="col-md-6 form-control-wrapper">
-									<input type="text" class="form-control" name="propertyZip" id="propertyZip" minlength="5" maxlength="12" placeholder="Enter ZIP code" required>
+									<input type="text" class="form-control" name="propertyZip" id="propertyZip" minlength="5" maxlength="12" placeholder="Enter ZIP code" disabled required>
 								</div>
 							</fieldset>
 						</div>
