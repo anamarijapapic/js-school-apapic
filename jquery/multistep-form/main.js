@@ -64,8 +64,7 @@
     function updateFormStatus() {
         if (verifyForm()) {
             $('.submit').removeClass('disabled');
-        } 
-        else {
+        } else {
             $('.submit').addClass('disabled');
         }
     }
@@ -79,6 +78,76 @@
 (function () {
     $(document).ready(function() {
         $('.selectPropertyType02').select2();
-        $('.selectPropertySize02').select2();
+        $('.selectPropertySize02').select2({
+            width: 800
+          });
     });
+
+    $(document).ready(function() {
+        let propertySizeHtml = $('.selectPropertySize02').html();
+
+        $('.selectPropertyType02').change(function() {
+            let selectedPropertyType = $('[name=propertyType] :selected').text();
+            let propertySize = $('.selectPropertySize02');
+
+            propertySize.html(propertySizeHtml);
+
+            let optGroup = $('optgroup[label="' + selectedPropertyType + '"]').html();
+
+            propertySize.html(optGroup);
+        });
+    });
+
+    function verifyZipCode() {
+        let zipCode = $('#propertyZip').val();
+        if (zipCode.length > 4 && zipCode.length < 13 && zipCode.match(/^\d+$/)) {
+            return true;
+        }
+        return false;
+    }
+
+    function updateFormStatus() {
+        if (verifyZipCode()) {
+            $('.submit02').prop("disabled", false);
+        } else {
+            $('.submit02').prop("disabled", true);
+        }
+    }
+
+    function updateStepStatus() {
+        let currentStep = $(document).find('.show');
+        
+        if (currentStep.find('.form-control').val() == '') {
+            $('.submit02').prop("disabled", true);
+            return false;
+        } else {
+            $('.submit02').prop("disabled", false);
+        }
+    }
+
+    $('.submit02').click(function(event){
+        event.preventDefault();
+
+        $('.submit02').prop("disabled", true);
+
+        let currentStep = $(document).find('.show');
+        let nextStep = currentStep.next().filter('.hidden');
+
+        if (! nextStep.length) {
+            $('.multistep-form-02').submit();
+        } else {
+            currentStep.removeClass('show');
+            currentStep.addClass('hidden');
+
+            let myProgress = $('.progressBar').find('.active');
+            myProgress.next().addClass('active');
+
+            nextStep.removeClass('hidden'); 
+            nextStep.addClass('show'); 
+        }
+    });
+
+    $('.selectPropertyType02').change(updateStepStatus);
+    $('.selectPropertySize02').change(updateStepStatus);
+    $('#propertyZip').change(updateFormStatus);
 })();

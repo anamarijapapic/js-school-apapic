@@ -122,10 +122,6 @@ footer {
     background: #fafafa;
 }
 
-.multistep-form-02 fieldset:not(:first-of-type) {
-    display: none;
-}
-
 .multistep-form-02 .form-step-text {
     position: absolute;
     z-index: 1;
