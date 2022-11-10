@@ -33,32 +33,38 @@
 						paperwork!
 					</p>
 					<form method="get" class="form">
-						<div class="form-group">
+						<div class="form-group has-feedback">
 							<label class="sr-only" for="firstName">First Name</label>
 							<div class="input-group">
 								<div class="input-group-addon">
 									<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
 								</div>
 								<input type="text" class="form-control input-lg" name="firstName" id="firstName" placeholder="First Name" required>
+								<span class="glyphicon glyphicon-ok form-control-feedback hidden" aria-hidden="true"></span>
 							</div>
+							<span class="help-block bg-danger hidden">This value is required.</span>
 						</div>
-						<div class="form-group">
+						<div class="form-group has-feedback">
 							<label class="sr-only" for="lastName">Last Name</label>
 							<div class="input-group">
 								<div class="input-group-addon">
 									<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
 								</div>
 								<input type="text" class="form-control input-lg" name="lastName" id="lastName" placeholder="Last Name" required>
+								<span class="glyphicon glyphicon-ok form-control-feedback hidden" aria-hidden="true"></span>
 							</div>
+							<span class="help-block bg-danger hidden">This value is required.</span>
 						</div>
-						<div class="form-group">
+						<div class="form-group has-feedback">
 							<label class="sr-only" for="email">Email address</label>
 							<div class="input-group">
 								<div class="input-group-addon">
 									<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
 								</div>
 								<input type="email" class="form-control input-lg" name="email" id="email" placeholder="Email" required>
+								<span class="glyphicon glyphicon-ok form-control-feedback hidden" aria-hidden="true"></span>
 							</div>
+							<span class="help-block bg-danger hidden">This value should be a valid email.</span>
 						</div>
 						<div class="form-group">
 							<label class="sr-only" for="company">Company</label>
@@ -96,23 +102,27 @@
 								</select>
 							</div>
 						</div>
-						<div class="form-group">
+						<div class="form-group has-feedback">
 							<label class="sr-only" for="phone">Phone</label>
 							<div class="input-group">
 								<div class="input-group-addon">
 									<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
 								</div>
 								<input type="tel" class="form-control input-lg" name="phone" id="phone" placeholder="Phone" required>
+								<span class="glyphicon glyphicon-ok form-control-feedback hidden" aria-hidden="true"></span>
 							</div>
+							<span class="help-block bg-danger hidden">This value should be a valid phone number.</span>
 						</div>
-						<div class="form-group">
+						<div class="form-group has-feedback">
 							<label class="sr-only" for="password">Password</label>
 							<div class="input-group">
 								<div class="input-group-addon">
 									<span class="glyphicon glyphicon-lock" aria-hidden="true"></span>
 								</div>
 								<input type="password" class="form-control input-lg" name="password" id="password" placeholder="Password" required>
+								<span class="glyphicon glyphicon-ok form-control-feedback hidden" aria-hidden="true"></span>
 							</div>
+							<span class="help-block bg-danger hidden">Password is too short. It should have 6 characters or more.</span>
 						</div>
 						<button type="submit" class="submit btn btn-lg btn-warning text-uppercase">Try it free</button>
 						<span class="help-block text-center">
