@@ -20,9 +20,9 @@
 		<div class="container">
 			<div class="row">
 				<div class="col col-md-6">
-					<p class="progress-text text-center text-primary">60% complete</p>
+					<p class="progress-text text-center text-primary">0% complete</p>
 					<div class="progress">
-						<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+						<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
 						</div>
 					</div>
 					<div class="form-wrapper">
@@ -39,7 +39,7 @@
 								<div class="input-group-addon">
 									<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
 								</div>
-								<input type="text" class="form-control input-lg" name="firstName" id="firstName" placeholder="First Name">
+								<input type="text" class="form-control input-lg" name="firstName" id="firstName" placeholder="First Name" required>
 							</div>
 						</div>
 						<div class="form-group">
@@ -48,7 +48,7 @@
 								<div class="input-group-addon">
 									<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
 								</div>
-								<input type="text" class="form-control input-lg" name="lastName" id="lastName" placeholder="Last Name">
+								<input type="text" class="form-control input-lg" name="lastName" id="lastName" placeholder="Last Name" required>
 							</div>
 						</div>
 						<div class="form-group">
@@ -57,7 +57,7 @@
 								<div class="input-group-addon">
 									<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
 								</div>
-								<input type="email" class="form-control input-lg" name="email" id="email" placeholder="Email">
+								<input type="email" class="form-control input-lg" name="email" id="email" placeholder="Email" required>
 							</div>
 						</div>
 						<div class="form-group">
@@ -75,8 +75,24 @@
 								<div class="input-group-addon">
 									<span class="glyphicon glyphicon-tag" aria-hidden="true"></span>
 								</div>
-								<select class="form-control input-lg" name="industry" id="industry">
-									<option value="" selected>Industry</option>
+								<select class="form-control input-lg" name="industry" id="industry" placeholder="Industry" required>
+									<option value="" disabled selected>Industry</option>
+									<option value="1">Agriculture, Forestry & Fishing</option>
+									<option value="2">Construction & Contractors</option>
+									<option value="3">Education</option>
+									<option value="4">Finance, Insurance & Real Estate</option>
+									<option value="5">Government and NGO</option>
+									<option value="6">Healthcare & Life Sciences</option>
+									<option value="7">Hospitality</option>
+									<option value="8">Manufacturing</option>
+									<option value="9">Oil, Gas, Mining & Chemicals</option>
+									<option value="10">Professional Services</option>
+									<option value="11">Public Safety</option>
+									<option value="12">Retail & Wholesale Distribution</option>
+									<option value="13">Service Industry</option>
+									<option value="14">Telco, Cable & Media</option>
+									<option value="15">Transportation & Logistics</option>
+									<option value="16">Utilities & Energy</option>
 								</select>
 							</div>
 						</div>
@@ -86,7 +102,7 @@
 								<div class="input-group-addon">
 									<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
 								</div>
-								<input type="tel" class="form-control input-lg" name="phone" id="phone" placeholder="Phone">
+								<input type="tel" class="form-control input-lg" name="phone" id="phone" placeholder="Phone" required>
 							</div>
 						</div>
 						<div class="form-group">
@@ -95,7 +111,7 @@
 								<div class="input-group-addon">
 									<span class="glyphicon glyphicon-lock" aria-hidden="true"></span>
 								</div>
-								<input type="password" class="form-control input-lg" name="password" id="password" placeholder="Password">
+								<input type="password" class="form-control input-lg" name="password" id="password" placeholder="Password" required>
 							</div>
 						</div>
 						<button type="submit" class="submit btn btn-lg btn-warning text-uppercase">Try it free</button>
