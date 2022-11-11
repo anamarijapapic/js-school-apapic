@@ -8,12 +8,15 @@ header {
     color: #fafafa !important;
 }
 
-.btn-start, .btn-back {
+.btn {
     margin: 0 0.5vw;
     padding: 2vh 3vh;
     width: 150px;
-    background-color: #00AA9F;
     color: #fafafa !important;
+}
+
+#startHere, #startAgain {
+    background-color: #00AA9F;
 }
 
 .btn-circle {

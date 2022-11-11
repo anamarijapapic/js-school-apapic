@@ -1,4 +1,4 @@
-steps = [
+var steps = [
     {
         "id": 0,
         "question": "Did you create a REEF account?",
@@ -57,8 +57,71 @@ steps = [
         "id": 9,
         "question": "Do you have more than one account?",
         "yes": ["end", "Vote with one account to avoid losing grade points and contact REEF support as soon as you can"],
-        "no": ["end", "Still not working? Contact our knowledgeable staff at REEF Support"]
+        "no": ["end", "Still not working?<br/><small>Contact our knowledgeable staff at REEF Support</small>"]
     },
 ];
 
-console.log(steps);
+$(function() {
+    var endReached;
+    var id;
+    var troubleshootingSteps = [];
+
+    $('.btn-start').click(function() {
+        endReached = false;
+        id = 0;
+        troubleshootingSteps = [];
+        troubleshootingSteps.push(steps[id].id);
+        $('.question').html(steps[id].question);
+        $('.btn-nav').css('background-color', '');
+        $('.questionnaire').removeClass('hidden');
+        if (this.id == "startHere") {
+            $(this).addClass('hidden');
+        } else if (this.id == "startAgain") {
+            $('.solution').addClass('hidden');
+        }
+    });
+
+    $('.btn-yes').click(function() {
+        if (steps[id].yes[0] == "id") {
+            newId = steps[id].yes[1];
+            id = newId;
+            troubleshootingSteps.push(steps[id].id);
+            $('.question').html(steps[id].question);
+            $('.btn-nav').css('background-color', '#00AA9F');
+        } else {
+            endReached = true;
+            $('.answer').html(steps[id].yes[1]);
+            $('.questionnaire').addClass('hidden');
+            $('.solution').removeClass('hidden');
+        }
+    });
+
+    $('.btn-no').click(function() {
+        if (steps[id].no[0] == "id") {
+            newId = steps[id].no[1];
+            id = newId;
+            troubleshootingSteps.push(steps[id].id);
+            $('.question').html(steps[id].question);
+            $('.btn-nav').css('background-color', '#00AA9F');
+        } else {
+            endReached = true;
+            $('.answer').html(steps[id].no[1]);
+            $('.questionnaire').addClass('hidden');
+            $('.solution').removeClass('hidden');
+        }
+    });
+
+    $('.btn-back').click(function() {
+        if (id > 0) {
+            prevId = troubleshootingSteps[troubleshootingSteps.length - 2];
+            id = prevId;
+            troubleshootingSteps.pop();
+            $('.question').html(steps[id].question);
+            if (id > 0) {
+                $('.btn-nav').css('background-color', '#00AA9F');
+            } else {
+                $('.btn-nav').css('background-color', '');
+            }
+        }
+    });
+});
