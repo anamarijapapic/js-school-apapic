@@ -7,7 +7,7 @@ steps = [
     },
     {
         "id": 1,
-        "question": "Will your grades be in your course and grade software/Learning Management System? (Example: Blackboard, Canvas, Desire2Learn, Moodle, Sakai, etc.)",
+        "question": "Will your grades be in your course and grade software/Learning Management System?<br/><small>(Example: Blackboard, Canvas, Desire2Learn, Moodle, Sakai, etc.)</small>",
         "yes": ["id", 2],
         "no": ["id", 6]
     },

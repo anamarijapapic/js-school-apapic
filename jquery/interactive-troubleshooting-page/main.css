@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header {
+    background-color: #00AA9F !important;
+    color: #fafafa !important;
+}
+
+.btn-start, .btn-back {
+    margin: 0 0.5vw;
+    padding: 2vh 3vh;
+    width: 150px;
+    background-color: #00AA9F;
+    color: #fafafa !important;
+}
+
+.btn-circle {
+    margin: 4vh 1vw;
+    padding: 2vh;
+    text-align: center;
+    width: 15vh;
+    height: 15vh;
+    font-size: 4vh;
+    border-radius: 7.5vh;
+}
+
+.btn-yes {
+    color: #00AA9F !important;
+}
+
+.btn-no {
+    color: #FF7518 !important;
+}
+
+.answer {
+    margin-bottom: 5vh;
+}
