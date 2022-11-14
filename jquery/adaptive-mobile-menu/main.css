@@ -1,0 +1,162 @@
+body {
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+    margin: 0;
+    background-color: #fd6a02;
+}
+
+.navbar-brand {
+    display: flex;
+    transform: translateX(-50%);
+    left: 50%;
+    position: absolute;
+    align-items: center;
+}
+
+.navbar-toggle {
+    border: none;
+}
+
+.navbar-toggle .icon-bar {
+    background-color: #fafafa !important;
+}
+
+.swiper {
+    margin-bottom: 1vh;
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 18vw;
+    height: auto;
+    object-fit: cover;
+}
+
+.jumbotron {
+    margin: 0;
+    padding: 5%;
+    width: 100%;
+    height: 70vh;
+    background-image: url(./assets/hero-image.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-shadow: 0 1px 1px #020202;
+    color: #fafafa;
+}
+
+.promo-heading h1 {
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.description p, .allergies p {
+    font-size: 2rem;
+}
+
+.price {
+    display: flex;
+}
+
+.price h1 {
+    font-size: 7rem;
+    font-weight: bold;
+}
+
+.price-details {
+    margin-top: 20px; 
+    margin-bottom: 10px; 
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.price-details span:last-child {
+    margin: -10px 0;
+}
+
+.menu-extra {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    margin: 1vh 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.menu-extra img {
+    width: 18vw;
+    height: auto;
+}
+
+.our-info {
+    border-top: solid 1px #fd6a02;
+    padding: 4vh 0;
+}
+
+.contact, .location {
+    margin-bottom: 2vh;
+    padding: 5px;
+    width: 80%;
+    height: 15vh;
+    border-radius: 10px;
+    background-color: #fd6a02;
+    color: #fafafa;
+}
+
+.contact img, .location img {
+    width: auto;
+    height: 12vh;
+    -webkit-filter: invert(100%); /* Safari/Chrome */
+    filter: invert(100%);
+}
+
+.contact, .location {
+    display: flex;
+    justify-content: left;
+}
+
+.contact-text, .location-text {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    margin-left: 4vw;
+}
+
+.contact-text h2, .contact-text h4, .location-text h2, .location-text h4 {
+    margin: 0;
+}
+
+.contact-text h2 a {
+    color: #fafafa;
+    font-weight: bold;
+}
+
+footer {
+    display: flex;
+    padding: 2vh 0;
+    text-align: center;
+    width: auto;
+    height: 20vh;
+    background-color: #cfcfcf;
+    font-size: 2rem;
+}
+
+.bi {
+    font-size: 4rem;
+    color: #333333;
+}
