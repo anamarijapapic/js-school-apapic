@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "gulp": "git+https://git@github.com/gulpjs/gulp.git#4.0",
+    "gulp": "git+https://git@github.com/gulpjs/gulp.git",
     "gulp-if": "2.x.x",
     "gulp-include": "1.x.x",
     "gulp-less": "3.x.x",
