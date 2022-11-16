@@ -1,10 +1,12 @@
 (function () {
-    $(document).ready(function(){
+    $(document).ready(function() {
         $('.slider').slick({
             dots: true,
+            appendDots: $('.slider'),
+            dotsClass: 'slick-dots',
             arrows: false,
             autoplay: true,
-            autoplaySpeed: 5000,
+            autoplaySpeed: 10000,
         });
     });
 })();
