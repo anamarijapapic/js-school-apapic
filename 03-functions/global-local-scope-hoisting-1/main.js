@@ -12,7 +12,7 @@ Default JS behavior where interpreter moves all variable declarations to the top
 Only hoist the declaration but not its value.
 */
 
-alert(example1);
+alert( example1 );
 
 var example1 = "Variable hoisting";
 
@@ -27,5 +27,5 @@ Function hoisting only works with function declarations — not with function ex
 example2();
 
 function example2() {
-    alert("Function hoisting");
+    alert( "Function hoisting" );
 }

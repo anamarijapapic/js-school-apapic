@@ -3,7 +3,7 @@ function foo() {
 	var a = 2;
 	function bar() {
 		var a = 3;
-		console.log(a); // koja vrijednost ce se ispisati? zasto?
+		console.log( a ); // koja vrijednost ce se ispisati? zasto?
 		// mozemo li odavde pristupiti i ispisati varijablu "a" koja ima vrijednost "2"
         
 	}

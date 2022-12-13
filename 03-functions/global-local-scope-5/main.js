@@ -1,6 +1,6 @@
 var a = 1; // a je globalna varijabla
 
-if (true) {
+if ( true ) {
 	var b = 1; // da li je b globalna varijabla? zasto?
 }
 

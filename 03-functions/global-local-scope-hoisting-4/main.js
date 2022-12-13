@@ -14,8 +14,8 @@ Bacit ce Uncaught TypeError: bar is not a function.
 */
 
 function foo() {
-	console.log(a);
+	console.log( a );
 }
 var bar = function() {
-	console.log(a);
+	console.log( a );
 }

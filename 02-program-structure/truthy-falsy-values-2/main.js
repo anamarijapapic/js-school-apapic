@@ -1,23 +1,23 @@
-if ('') {
-	console.log('Block #1');
+if ( '' ) {
+	console.log( 'Block #1' );
 }
-if (' ') {
-	console.log('Block #2');
+if ( ' ' ) {
+	console.log( 'Block #2' );
 }
-if ('  ') {
-	console.log('Block #3');
+if ( '  ' ) {
+	console.log( 'Block #3' );
 }
-if (0) {
-	console.log('Block #4');
+if ( 0 ) {
+	console.log( 'Block #4' );
 }
-if ('0') {
-	console.log('Block #5');
+if ( '0' ) {
+	console.log( 'Block #5' );
 }
-if (1) {
-	console.log('Block #6');
+if ( 1 ) {
+	console.log( 'Block #6' );
 }
-if ('1') {
-	console.log('Block #7');
+if ( '1' ) {
+	console.log( 'Block #7' );
 }
 
 /* 

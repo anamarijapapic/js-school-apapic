@@ -7,8 +7,8 @@ function foo() {
 	}
 	bar();
 
-	if (true) {
-		console.log(a); // kojoj varijabli se pristupa? koja vrijednost ce se ispisati? zasto?
+	if ( true ) {
+		console.log( a ); // kojoj varijabli se pristupa? koja vrijednost ce se ispisati? zasto?
 	}
 }
 foo();

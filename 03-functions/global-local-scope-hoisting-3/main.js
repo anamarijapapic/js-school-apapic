@@ -1,7 +1,7 @@
 var a = 1;
 function foo() {
 	function bar() {
-		console.log(a); // kojoj varijabli se pristupa? koja vrijednost ce se ispisati? zasto?
+		console.log( a ); // kojoj varijabli se pristupa? koja vrijednost ce se ispisati? zasto?
 	}
 	bar();
 	var a = 2;
@@ -18,7 +18,7 @@ function foo() {
     var a;
     
 	function bar() {
-		console.log(a);
+		console.log( a );
 	}
 	bar();
 	

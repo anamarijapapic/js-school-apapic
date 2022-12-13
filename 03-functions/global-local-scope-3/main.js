@@ -2,16 +2,16 @@ var a = 1;
 function foo() {
 	var a = 2;
 	function bar1() {
-		console.log(a); // kojoj varijabli se pristupa? -> varijabla a iz lokalnog scopea funckcije foo
+		console.log( a ); // kojoj varijabli se pristupa? -> varijabla a iz lokalnog scopea funckcije foo
 	}
 	var bar2 = function() {
-		console.log(a); // kojoj varijabli se pristupa? -> varijabla a iz lokalnog scopea funckcije foo
+		console.log( a ); // kojoj varijabli se pristupa? -> varijabla a iz lokalnog scopea funckcije foo
 	};
 	bar3 = function() {
-		console.log(a); // kojoj varijabli se pristupa? -> varijabla a iz lokalnog scopea funckcije foo
+		console.log( a ); // kojoj varijabli se pristupa? -> varijabla a iz lokalnog scopea funckcije foo
 	}
 	window.bar4 = function() {
-		console.log(a); // kojoj varijabli se pristupa? -> varijabla a iz lokalnog scopea funckcije foo
+		console.log( a ); // kojoj varijabli se pristupa? -> varijabla a iz lokalnog scopea funckcije foo
 	}
 	bar1();
 	bar2();

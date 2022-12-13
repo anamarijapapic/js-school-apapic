@@ -1,6 +1,6 @@
 var a = 1;
 function foo() {
-	console.log(a); // kojoj varijabli se pristupa? koja vrijednost ce se ispisati? zasto?
+	console.log( a ); // kojoj varijabli se pristupa? koja vrijednost ce se ispisati? zasto?
 	
 	var a = 2;
 }
@@ -14,7 +14,7 @@ Variable hoisting zapravo cini:
 function foo() {
     var a;
     
-	console.log(a);
+	console.log( a );
 	
 	a = 2;
 }
