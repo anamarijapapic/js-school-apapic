@@ -1,4 +1,4 @@
-( function() {
+( function () {
 
     function countBs( str ) {
         return countChar( str, 'B' );
@@ -17,4 +17,4 @@
     console.log( countBs( "BBC" ) );				// 2
     console.log( countChar( "kakkerlak", "k" ) );	// 4
 
-}() );
+} ) ();

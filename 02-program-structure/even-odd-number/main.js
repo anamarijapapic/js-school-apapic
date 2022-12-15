@@ -1,4 +1,4 @@
-( function() {
+( function () {
 
     do {
         let num = Number( prompt( "Unesite broj:" ) );
@@ -13,4 +13,4 @@
         }
     } while ( ! Number.isNaN( num ) && Number.isInteger( num ) && num !== 0 );
 
-}() );
+} ) ();

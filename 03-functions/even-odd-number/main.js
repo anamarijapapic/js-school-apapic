@@ -1,4 +1,4 @@
-( function() {
+( function () {
 
     function isEven( num ) {
         num = Math.abs( num );
@@ -10,11 +10,11 @@
         }
         return isEven( Math.abs( num ) - 2 );
     }
-    
+
     console.log( isEven( 50 ) );	// true
     console.log( isEven( 75 ) );	// false
     console.log( isEven( -1 ) );	// ??
-    
+
     /*
     Behavior on -1:
     Uncaught RangeError: Maximum call stack size exceeded
@@ -23,4 +23,4 @@
     Fix: num = Math.abs( num );
     */
 
-}() );
+} ) ();

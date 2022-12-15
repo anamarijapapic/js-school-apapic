@@ -1,7 +1,7 @@
-( function() {
+( function () {
 
     let num = Number( prompt( "Unesite broj:", "" ) );
-    
+
     if ( ! num ) {
         console.log( "0 je visekratnik broja " + num );
     }
@@ -18,4 +18,4 @@
         console.log( "7 je visekratnik broja " + num );
     }
 
-}() );
+} ) ();

@@ -1,4 +1,4 @@
-( function() {
+( function () {
 
     function countDown( num ) {
         if ( num < 1 ) {
@@ -7,7 +7,7 @@
         console.log( num );
         countDown( num - 1 );
     }
-    
+
     function countUp( num ) {
         if ( num < 1 ) {
             return;
@@ -15,7 +15,7 @@
         countUp( num - 1 );
         console.log( num );
     }
-    
+
     countDown( 10 );
     // 10
     // 9
@@ -27,7 +27,7 @@
     // 3
     // 2
     // 1
-    
+
     countUp( 10 );
     // 1
     // 2
@@ -40,4 +40,4 @@
     // 9
     // 10
 
-}() );
+} ) ();

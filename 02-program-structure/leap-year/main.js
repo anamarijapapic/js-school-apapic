@@ -1,7 +1,7 @@
-( function() {
+( function () {
 
     let year = parseInt( prompt( "Unesite godinu", "0" ) );
-    
+
     if ( ! ( year % 400 ) || ! ( year % 4 ) && year % 100 ) {
         console.log( "Godina " + year + ". je prijestupna." );
     }
@@ -9,4 +9,4 @@
         console.log( "Godina " + year + ". nije prijestupna." );
     }
 
-}() );
+} ) ();

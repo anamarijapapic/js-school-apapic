@@ -1,4 +1,4 @@
-( function() {
+( function () {
 
     let line = [];
     for ( let c = -50; c < 50; c += 5 ) {
@@ -10,4 +10,4 @@
         }
     }
 
-}() );
+} ) ();
