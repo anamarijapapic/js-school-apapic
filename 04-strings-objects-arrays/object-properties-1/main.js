@@ -10,14 +10,14 @@ var person = {
 // change person's name and print it to console by using both notations.
 
 person.name = 'Jane Doe';
-console.log(person.name);
+console.log( person.name );
 
 person['name'] = 'Bob';
-console.log(person['name']);
+console.log( person['name'] );
 
 // change persons's shoe size and print it to console. can we access shoe size by using both notations?
 
 person['shoe size'] = 40;
-console.log(person['shoe size']);
+console.log( person['shoe size'] );
 
 // no, dot notation doesn't work for accessing multiple word propeties, we can only use bracket notation

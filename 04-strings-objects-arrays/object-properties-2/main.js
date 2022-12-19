@@ -6,9 +6,9 @@ var person = {
 // what happens when we try to access a property that's undeclared (e.g. person.address)?
 // do we get a reference error like when trying to access a variable that's undeclared?
 
-console.log(person.address);
+console.log( person.address );
 person.address = '10 Downing Street';
-console.log(person.address);
+console.log( person.address );
 
 // reading an undeclared property returns undefined, and no errors
 // assigning a value to an undefined property creates that property on the object with given value
@@ -20,4 +20,4 @@ console.log(person.address);
 delete person.name;
 delete person["shoe size"];
 delete person.address;
-console.dir(person);
+console.dir( person );
