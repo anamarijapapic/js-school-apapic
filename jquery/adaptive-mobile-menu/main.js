@@ -1,5 +1,7 @@
-(function () {
-    var swiper = new Swiper(".burgerMenu", {
+( function () {
+
+    let swiper = new Swiper( '.js-burger-menu', {
         slidesPerView: 5.5,
-    });
-})();
+    } );
+
+} ) ();

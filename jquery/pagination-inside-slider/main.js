@@ -1,12 +1,12 @@
-(function () {
-    $(document).ready(function() {
-        $('.slider').slick({
-            dots: true,
-            appendDots: $('.slider'),
-            dotsClass: 'slick-dots',
-            arrows: false,
-            autoplay: true,
-            autoplaySpeed: 10000,
-        });
-    });
-})();
+( function () {
+
+    $( '.slider' ).slick( {
+        dots: true,
+        appendDots: $( '.slider' ),
+        dotsClass: 'slick-dots',
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 10000,
+    } );
+
+} ) ();
